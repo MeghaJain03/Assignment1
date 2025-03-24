@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
-  { label: "Find a Therapist", to: "/therapist" },
-  { label: "Services", to: "/services" },
-  { label: "Contact", to: "/contact" },
-  { label: "Groups", to: "/groups" },
-  { label: "Premium", to: "/premium" },
-  { label: "Business", to: "/business" },
-  { label: "Programs", to: "/programs" },
+  { label: "Home", to: "" },
+  { label: "Volunteers", to: "" },
+  { label: "Gallery", to: "" },
+  { label: "Initiatives", to: "" },
+  { label: "Contact Us", to: "" },
+  { label: "Blog", to: "" },
+  { label: "Explore", to: "/explore" },
 ];
 
 const Navbar = () => {
@@ -18,14 +18,14 @@ const Navbar = () => {
   const handleLinkClick = () => setIsMenuOpen(false);
 
   return (
-    <header className="bg-gradient-to-r from-cyan-200 via-gray-100 to-yellow-100 w-full z-50 shadow-md text-base">
+    <header className="bg-green-600 w-full z-50 shadow-md">
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         {/* Logo Section */}
         <Link to="/work">
           <img
-            src="/Assets/logo5.png"
-            alt="Freudia Logo"
-            className="w-36 h-auto"
+            src=""
+            alt="Logo"
+            className="w-36 h-auto border"
           />
         </Link>
 
@@ -62,14 +62,14 @@ const Navbar = () => {
         <nav
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } lg:flex lg:items-center absolute lg:static top-16 left-0 w-full lg:w-auto bg-gradient-to-r from-cyan-200 via-gray-100 to-yellow-100 lg:bg-transparent shadow-md lg:shadow-none lg:py-0`}
+          } lg:flex lg:items-center absolute lg:static top-16 left-0 w-full lg:w-auto lg:bg-transparent shadow-md lg:shadow-none lg:py-0`}
         >
           <ul className="flex flex-col lg:flex-row lg:items-center lg:space-x-6 p-4 lg:p-0">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <Link
                   to={link.to}
-                  className="block py-2 px-4 text-gray-800 hover:text-teal-700"
+                  className="block py-2 px-4 text-white hover:text-black"
                   onClick={handleLinkClick} // Close menu when a link is clicked
                 >
                   {link.label}
@@ -79,7 +79,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/login"
-                className="bg-teal-600 text-white py-2 px-4 rounded-full hover:bg-teal-700 transition"
+                className="bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-400 transition"
                 onClick={handleLinkClick} // Close menu when login is clicked
               >
                 Login
