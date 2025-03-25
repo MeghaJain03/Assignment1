@@ -33,7 +33,7 @@ const Card = ({ title, image, link }) => {
         className="absolute bottom-3 right-3 text-2xl"
         onClick={() => setIsFavorite(!isFavorite)}
       >
-        <FaHeart className={isFavorite ? "text-pink-500" : "text-white"} />
+        <FaHeart className={isFavorite ? "text-red-700" : "text-white"} />
       </button>
 
       {image && <img src={image} alt={title} className="h-48 w-full object-cover" />}

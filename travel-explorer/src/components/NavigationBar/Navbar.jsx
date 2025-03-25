@@ -23,9 +23,9 @@ const Navbar = () => {
         {/* Logo Section */}
         <Link to="/work">
           <img
-            src=""
+            src="/Assets/logo.jpg"
             alt="Logo"
-            className="w-36 h-auto border"
+            className="w-24 h-24 rounded-full"
           />
         </Link>
 
@@ -79,7 +79,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/login"
-                className="bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-400 transition"
+                className="bg-red-700 text-white py-2 px-4 rounded-full hover:bg-red-400 transition"
                 onClick={handleLinkClick} // Close menu when login is clicked
               >
                 Login

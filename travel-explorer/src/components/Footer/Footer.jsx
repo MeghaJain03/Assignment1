@@ -48,7 +48,7 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row sm:justify-between">
         {/* Left Section */}
         <div className="flex flex-col items-start sm:items-start mb-6 sm:mb-0">
-          <img src="" alt="Logo" className="w-40 h-16 border" />
+          <img src="/Assets/logo.jpg" alt="Logo" className="w-28 h-28 rounded-full" />
           <p className="mt-2 text-white">&copy; Trekking Mantra</p>
           <div className="flex space-x-4 mt-4">
             {socialMediaIcons.map((icon, index) => (

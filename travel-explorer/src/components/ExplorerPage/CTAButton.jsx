@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const CTAButton = ({ to, label, className }) => {
+const CTAButton = ({ to, label, className= "bg-red-700 hover:bg-red-300" }) => {
   const [screenSize, setScreenSize] = useState(window.innerWidth);
 
   // Function to update screen size on window resize
@@ -23,7 +23,7 @@ const CTAButton = ({ to, label, className }) => {
   // Button padding and font size adjustments based on screen size
   const buttonClasses = `${isMobile ? 'px-3 py-2 text-sm' : 
                           isTablet ? 'px-4 py-2 text-base' : 
-                          'px-5 py-3 text-lg'} bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors duration-300 text-base ${className}`;
+                          'px-5 py-3 text-lg'} text-white rounded-lg transition-colors duration-300 ${className}`;
 
   return (
     <Link to={to}>
